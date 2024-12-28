@@ -1,0 +1,23 @@
+<MainScreen>:
+    camera_preview: camera_preview
+    status_label: status_label
+    
+    BoxLayout:
+        orientation: 'vertical'
+        padding: '10dp'
+        spacing: '10dp'
+        
+        Label:
+            id: status_label
+            text: 'Point camera at prescription'
+            size_hint_y: 0.1
+            
+        Image:
+            id: camera_preview
+            size_hint_y: 0.7
+        
+        Button:
+            text: 'Capture'
+            size_hint_y: 0.2
+            on_press: root.capture_image()
+            background_color: 0.2, 0.6, 1, 1

@@ -1,0 +1,112 @@
+<ResultScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: '20dp'
+        spacing: '10dp'
+        
+        Label:
+            text: 'Medicine Information'
+            size_hint_y: 0.1
+            font_size: '24sp'
+            bold: True
+        
+        ScrollView:
+            size_hint_y: 0.8
+            
+            GridLayout:
+                cols: 1
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: '10dp'
+                padding: '10dp'
+                
+                Label:
+                    text: 'Medicine Name'
+                    font_size: '18sp'
+                    size_hint_y: None
+                    height: '30dp'
+                    bold: True
+                    underline: True
+                    
+                Label:
+                    id: medicine_name_label
+                    text: ''
+                    size_hint_y: None
+                    text_size: self.width, None
+                    height: self.texture_size[1]
+                    halign: 'left'
+                    valign: 'middle'
+                    
+                Label:
+                    text: 'Generic Name'
+                    font_size: '18sp'
+                    size_hint_y: None
+                    height: '30dp'
+                    bold: True
+                    underline: True
+                    
+                Label:
+                    id: generic_name_label
+                    text: ''
+                    size_hint_y: None
+                    text_size: self.width, None
+                    height: self.texture_size[1]
+                    halign: 'left'
+                    valign: 'middle'
+                
+                BanglaLabel:
+                    text: 'ঔষধের নাম'
+                    font_size: '18sp'
+                    size_hint_y: None
+                    height: '30dp'
+                    bold: True
+                    underline: True
+                    
+                BanglaLabel:
+                    id: bg_name_label
+                    text: ''
+                    size_hint_y: None
+                    text_size: self.width, None
+                    height: self.texture_size[1]
+                    halign: 'left'
+                    valign: 'middle'
+                    
+                BanglaLabel:
+                    text: 'জেনেরিক নাম'
+                    font_size: '18sp'
+                    size_hint_y: None
+                    height: '30dp'
+                    bold: True
+                    underline: True
+                    
+                BanglaLabel:
+                    id: bg_generic_name_label
+                    text: ''
+                    size_hint_y: None
+                    text_size: self.width, None
+                    height: self.texture_size[1]
+                    halign: 'left'
+                    valign: 'middle'
+                
+                BanglaLabel:
+                    text: 'ব্যবহার'
+                    font_size: '18sp'
+                    size_hint_y: None
+                    height: '30dp'
+                    bold: True
+                    underline: True
+                    
+                BanglaLabel:
+                    id: usage_label
+                    text: ''
+                    size_hint_y: None
+                    text_size: self.width, None
+                    height: self.texture_size[1]
+                    halign: 'left'
+                    valign: 'middle'
+        
+        Button:
+            text: 'Back to Camera'
+            size_hint_y: 0.1
+            on_press: root.go_back()
+            background_color: 0.2, 0.6, 1, 1
